@@ -8,6 +8,7 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { VisitorsCounterComponent } from './visitors-counter/visitors-counter.component';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
     VisitorsCounterComponent
   ],
   imports: [
+    AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     BrowserModule
